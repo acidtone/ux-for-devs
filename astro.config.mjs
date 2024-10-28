@@ -6,22 +6,20 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: {
-				github: 'https://github.com/withastro/starlight',
-			},
+			title: 'UX for Devs',
 			sidebar: [
 				{
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Getting Started with CSS', slug: 'guides' },
+						{ label: 'Visual Hierarchy', slug: 'guides/visual-hierarchy' },
+						{ label: 'Repetition', slug: 'guides/repetition' },
+						{ label: 'Typography', slug: 'guides/typography' },
+						{ label: 'Space', slug: 'guides/space' },
+						{ label: 'Grid Systems and Alignment', slug: 'guides/grid-systems' },
 					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
+				}
 			],
 		}),
 	],
