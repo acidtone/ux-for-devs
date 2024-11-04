@@ -1,0 +1,95 @@
+---
+title: Readable Web Typography
+sidebar:
+  order: 2
+---
+import { Steps, Aside, Code } from '@astrojs/starlight/components';
+
+Readable text is a balance of the following fundamental characteristics of typography:
+1. Font size
+2. Line spacing
+3. Line length
+
+Continue with the wikipedia text from the [previous exercise](../wiki-markup) and customize your text and font styles. You can also use the markup in [this example](https://codepen.io/browsertherapy/pen/RwaJmbx) or copy/paste this minimal HTML into your project:
+
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <h1>This is a top-level heading</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, odio nesciunt esse tenetur aut iure placeat natus hic magni voluptas consequatur ad, eveniet minima in soluta sequi cumque corrupti illum saepe quasi quam, cupiditate exercitationem repellat iste. Dolorem laborum, molestias nam perferendis quis rem saepe doloremque possimus, error quos laboriosam.</p>
+  </main>
+</body>
+</html>
+```
+## Instructions
+<Steps>
+1. Increase the font size from its `16px` default using [`font-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) on the `<body>` element.
+    ```css
+    // style.css
+    body {
+      font-size: 22px;
+    }
+    ```
+
+2. Increase the leading of your text from the page's `1.2` default by setting `line-height` on the `<body>`.
+    ```css {4}
+    // style.css
+    body {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+    ```
+3. Set a max line length by limiting the size of your text container (such as a `<main>` elenent) using `max-width`.
+    ```css {7-9}
+    // style.css
+    body {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 75ch;
+    }
+    ```
+4. Center your content on the page by setting `margin: auto` on your text container.
+    ```css {9}
+    // style.css
+    body {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 75ch;
+      margin: auto;
+    }
+    ```
+5. Bonus: Ensure that there's a "scroll track" on mobile devices by setting a text container `width` in viewport units.
+     ```css {10}
+    // style.css
+    body {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 75ch;
+      margin: auto;
+      width: 80vw;
+    }
+    ```
+</Steps>
+
+Your finished code should look similar to the code in [this example](https://codepen.io/browsertherapy/pen/RwaJmbx).
+
+<Aside title="Uncomment the CSS" type="note">
+Go to the CSS tab in the above Codepen and uncomment the relevant lines to see their effect on the displayed content.
+</Aside>

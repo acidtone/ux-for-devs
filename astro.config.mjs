@@ -19,6 +19,10 @@ export default defineConfig({
 						{ label: 'Space', slug: 'guides/space' },
 						{ label: 'Grid Systems and Alignment', slug: 'guides/grid-systems' },
 					],
+				},
+				{
+					label: 'Exercises',
+					autogenerate: { directory: 'exercises' },
 				}
 			],
 		}),

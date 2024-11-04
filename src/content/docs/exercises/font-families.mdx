@@ -1,0 +1,57 @@
+---
+title: Setting Your Fonts
+sidebar:
+  order: 3
+---
+import { Steps, Aside, Code } from '@astrojs/starlight/components';
+
+The default fonts for the browser are boring! In this exercise, you will spice up your designs with proper fallbacks for your Display and Text fonts by setting:
+1. Generic font families as a base fallback;
+2. Web-safe system font families as a fallback for Google Fonts;
+3. Fancy Google Fonts for a professional finish to your text.
+
+## Instructions
+<Steps>
+1. Set a generic font family of `sans-serif` for body text and `serif` for headings. 
+    ```css
+    // style.css
+    body {
+      font-family: serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: sans-serif;
+    }
+    ```
+2. Pick a web-safe system font stack using [this example](https://codepen.io/browsertherapy/pen/eYNmYQP) as a reference.
+    ```css "Trebuchet MS, Helvetica, " "Tahoma, Geneva, "
+    // style.css
+    body {
+      font-family: Trebuchet MS, Helvetica, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: Tahoma, Geneva, sans-serif;
+    }
+    ```
+
+3. Finally, the fun part. Pick a favourite [Google Font](https://fonts.google.com/) combination for your page from a list such as [Top 50 Google Font Pairings](https://www.pagecloud.com/blog/best-google-fonts-pairings).
+4. Using the instructions provided on [Google Font](https://fonts.google.com/) add your chosen Display font to your headings and Text font to your `<body>` element.
+
+    ```css {2} "\"Roboto", \" "\"Unlock\", "
+    // style.css
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Unlock&display=swap');
+
+    body {
+      font-family: "Roboto", Trebuchet MS, Helvetica, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Unlock", Tahoma, Geneva, sans-serif;
+    }
+    ```
+    <Aside type="caution" title="Keep it readable!">
+    While you can have some fun with the Display Fonts for your headings, your Text Fonts for the body text should be simple and readable due to the amount of content and its size.
+    </Aside>
+</Steps>
+
