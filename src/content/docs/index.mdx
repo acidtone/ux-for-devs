@@ -8,7 +8,7 @@ hero:
     file: ../../assets/houston.webp
   actions:
     - text: Getting Started with CSS
-      link: /guides
+      link: /visual-hierarchy
       icon: right-arrow
 
 ---
@@ -16,10 +16,19 @@ hero:
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 ## Next steps
+<CardGrid>
+  <LinkCard title="Getting Started with CSS" href="/visual-hierarchy" description="What is CSS anyway?" />
+  <LinkCard title="Typography" href="/visual-hierarchy/typography" description="Learn how to set Display and Text fonts with Google Fonts." />
+  <LinkCard title="Web Colour" href="/visual-hierarchy/web-colour" description="Learn basic colour theory and the five colour models of the web." />
+  <LinkCard title="Repetition" href="/visual-hierarchy/repetition" description="Use repetition to achieve consistency in your designs." />
+  <LinkCard title="Space" href="/visual-hierarchy/space" description="Use space to achieve legible, clean designs." />
+  <LinkCard title="Grid Systems and Alignment" href="/visual-hierarchy/grid-systems" description="Add structure to your designs with grid and flexbox."/>
+</CardGrid>
 
-
-	<LinkCard title="Visual Hierarchy" href="/guides/visual-hierarchy" description="Learn the basics of Visual Hierarchy and how it applies to web development." />
-	<LinkCard title="Repetition" href="/guides/repetition" description="Use repetition to achieve consistency in your designs." />
-	<LinkCard title="Typography" href="/guides/typography" description="Learn how to set Display and Text fonts with Google Fonts." />
-	<LinkCard title="Space" href="/guides/space" description="Use space to achieve legible, clean designs." />
-	<LinkCard title="Grid Systems and Alignment" href="/guides/grid-systems" description="Add structure to your designs with grid and flexbox."/>
+## Exercises
+<CardGrid>
+  <LinkCard title="Wiki Markup" href="/exercises/wiki-markup" description="Take simple text from Wikipedia and add visual hierarchy with HTML markup." />
+  <LinkCard title="Readable Web Typography" href="/exercises/readable-typography" description="Apply the fundamentals of the typography triad to style readable text." />
+  <LinkCard title="Font Families" href="/exercises/font-families" description="Have some with your text by adding custom fonts from Google Fonts." />
+  <LinkCard title="Web Colour" href="/exercises/web-colour" description="Use the 60-30-10 Rule to create an accessible colour palette that might not be immediately ugly." />
+</CardGrid>

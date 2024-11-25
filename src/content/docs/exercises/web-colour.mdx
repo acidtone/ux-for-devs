@@ -1,0 +1,99 @@
+---
+title: Defining a Colour Palette
+sidebar:
+  order: 3
+---
+import { Steps, Aside, Code, LinkCard } from '@astrojs/starlight/components';
+
+Colour is one of the first steps toward effective visual hierarchy. In this exercise, you will define a simple colour palette based on the [60-30-10 Rule](https://www.youtube.com/watch?v=UWwNIMHFdW4).
+
+## Instructions
+<LinkCard title="Starter coder" href="https://codepen.io/acidtone/pen/qBeGbGW" />
+<Steps>
+1. Using one of the tools below, choose your colours following the 60-30-10 Rule:
+    - **60%**: Neutral/base colour
+    - **30%**: Primary colour
+    - **10%**: Call-to-Action colour
+    ### Tools
+    <LinkCard title="Atmos - Colour Palette Generator" href="https://atmos.style/" />
+    <LinkCard title="Coolers" href="https://coolors.co/" />
+    <LinkCard title="Image Colour Pallette Generator" href="https://coolors.co/image-picker" />
+
+    <Aside type="tip" title="Pro-tip">
+      Try starting out just one CTA colour, using shades of grey for Neutral and Primary colours. If you go with three colours, try using a [colour harmony](https://atmos.style/blog/color-theory-ui-design) to define an effective colour combination.
+    </Aside>
+
+2. In the starter code, replace the grey background of the page body with your chosen **Neutral/base colour**:
+    ```css "#ccc"
+    // style.css
+    body {
+      background-color: #ccc;
+      colour: #333;
+    }
+    ``` 
+    <Aside type="tip" title="Pro-tip">
+      Define your colour with the [`lch()` or `lab()`](https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/) colour models to make your code more intuitive.
+    </Aside>
+3. Now change the background colour of the card to your **Primary colour**.
+    ```css "#555"
+    // style.css
+    .cta {
+      background-color: #555;
+      color: white;
+    }
+    ```
+4. Set the background colour of your CTA button to the (you guessed it) CTA colour you chose for your palette.
+    ```css "#222"
+    // style.css
+    .cta a {
+      color: white;
+      background-color: #222;
+    }
+    ```
+5. Use a complimentary (or contrasting) colour for the link [`:hover`](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover) and [`:active`](https://developer.mozilla.org/en-US/docs/Web/CSS/:active) states;
+    ```css "#ddd" "#777"
+    /* Hover state */
+    .cta a:hover {
+      background-color: #ddd;
+      color: #333;
+    }
+
+    /* Click state */
+    .cta a:active {
+      background-color: #777;
+      color: #333;
+    }
+    ```
+6. Now that the background colours are set, make sure the colour of your text matches their respective background colours. Be sure to keep a [readable contrast ratio](https://www.siegemedia.com/contrast-ratio)! When in doubt, stick with black, white and grey.
+    ```css "#333" "white" "#333"
+    // style.css
+    body {
+      background-color: #ccc;
+      colour: #333;
+    }
+
+    .cta {
+      background-color: #555;
+      color: white;
+    }
+
+    /* Hover state */
+    .cta a:hover {
+      background-color: #ddd;
+      color: #333;
+    }
+
+    /* Click state */
+    .cta a:active {
+      background-color: #777;
+      color: #333;
+    }
+    ```
+    <Aside type="tip" title="Pro-tip">
+      Use the Firefox Inspector to check your contrast ratios (not available in Chrome, yet)! Click on the colour swatch of a `color` property in the Rules panel to see it's contrast rating.
+    </Aside>
+7. Bonus! Spice up your design with one or more of the following:
+    - Add colour animations using [`transition`](https://css-tricks.com/almanac/properties/t/transition/) property.
+    - Use a [CSS gradient](https://css-tricks.com/css3-gradients/) instead of a flat colour.
+    - Create a light/dark version of your colour palette and apply it to your sample code. We'll talk about how to create a light/dark mode button in a future session.
+</Steps>
