@@ -21,6 +21,10 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'UI Conventions',
+					autogenerate: { directory: 'conventions' }
+				},
+				{
 					label: 'Exercises',
 					autogenerate: { directory: 'exercises' },
 				}
