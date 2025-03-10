@@ -12,7 +12,7 @@ export default defineConfig({
 					label: 'Visual Hierarchy',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Introduction to Visual Hierarchy', slug: 'visual-hierarchy' },
+						{ label: 'Introduction', slug: 'visual-hierarchy' },
 						// { label: 'Typography', slug: 'visual-hierarchy/typography' },
 						{ label: 'Web Colour', slug: 'visual-hierarchy/web-colour' },
 						// { label: 'Repetition', slug: 'visual-hierarchy/repetition' },
