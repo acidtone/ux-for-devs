@@ -1,0 +1,116 @@
+---
+title: Web Colour - Exercises
+---
+import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
+
+## Call-to-Action Colour Palette
+### Starter Code
+<Tabs>
+  <TabItem label="index.html">
+    ```html
+    <h1>Colour Theory for Devs</h1>
+    <article class="cta">
+      <h2>The 60-30-10 Rule</h2>
+      <p>How do you apply color in mobile UI design projects? Here's a little tip, the 60-30-10 color rule (it's more like a guideline) will help you to get a good start to applying color in a mature and seamless way...</p>
+      <a href="https://www.youtube.com/watch?v=UWwNIMHFdW4">Watch Video</a>
+    </article>
+    ```
+  </TabItem>
+  <TabItem label="style.css">
+    ```css
+    /* Colours */
+    body {
+      background-color: white;
+      color: black;
+    }
+
+    .cta {
+      background-color: black;
+      color: white;
+      box-shadow:
+          1px 2px 2px rgb(128 128 128 / 0.2),
+          2px 4px 4px rgb(128 128 128  / 0.2),
+          4px 8px 8px rgb(0128 128 128  / 0.2),
+          8px 16px 16px rgb(128 128 128  / 0.2),
+          16px 32px 32px rgb(128 128 128  / 0.2);
+    }
+
+    .cta a {
+      background-color: white;
+      color: black;
+      box-shadow:
+        1px 2px 2px rgb(64 64 64 / 0.2),
+        2px 4px 4px rgb(64 64 64 / 0.2),
+        4px 8px 8px rgb(64 64 64 / 0.2);
+    }
+
+    /* Hover state */
+    .cta a:hover {
+
+    }
+
+    /* Click state */
+    .cta a:active {
+
+    }
+
+    /* Layout and Fonts */
+    /* Body text */
+    body {
+      font-family: sans-serif;
+      font-size: clamp(18px, 3vw, 24px);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: serif;
+    }
+
+    /* Call-to-action container */
+    .cta {
+      max-width: 60ch;
+      margin: auto;
+      padding: 1rem 2rem;
+      
+      border-radius: .5rem;
+    }
+
+    /* Call to Action button */
+    .cta a {
+      font-family: "Nunito", sans-serif;
+      text-decoration: none;
+      text-align: center;
+
+      display: block;
+      width: max-content;
+      margin: auto;
+      padding: .5rem 1rem;
+      
+      border-radius: .25rem;
+    }
+    ```
+  </TabItem>
+</Tabs>
+
+### Instructions
+Using the starter code above, create a colour palette for a Call-to-Action:
+<Steps>
+1. Convert each CSS colour to its equivalent HSL value;
+    - See: [How to Read Color Hexcodes](https://www.youtube.com/watch?v=eqZqx6lRPe0)
+2. Choose white/black as your neutral (60%) and primary 30% colours;
+    - See: [The 60-30-10 Rule](https://www.youtube.com/watch?v=UWwNIMHFdW4)
+    - Note: White has already been chosen as neutral in the starter code. Reverse the colours if you'd like to create a Dark Mode version. 
+3. Pick a Call-to-Action button colour (10%) from one of your mood boards or from an online resource;
+4. Using HSL, set the `background-color` of your CTA button to your CTA colour.
+5. Set a matching `color` for your CTA link text.
+    - See: [All you need to know about color theory in UI Design](https://atmos.style/blog/color-theory-ui-design);
+    - Ensure your link text colour has a high enough contrast ratio (Video: [Testing Colour Contrast in FireFox](https://www.youtube.com/watch?v=eBefjaWud-M));
+    - It's common practice to also set your `:visited` state to the same colour as your normal link text colour.
+5. Create a hover state by reversing link background and link text colours (for example) on `:hover`.
+6. Set an `:active` state (when the button is pressed) to another set of matching (or not!) colours.
+7. **Optional**: Using HSL and colour harmonies, make small tweaks to white and black to create light and dark complimentary colours that match your Call-to-Action colour.
+8. **Spicy**: Convert your colours from HSL to either [LCH or OKLCH](https://atmos.style/blog/lch-vs-oklch)!
+</Steps>
+
+See [this Codepen](https://codepen.io/acidtone/pen/qBeGbGW) for an example solution.
+
