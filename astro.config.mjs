@@ -21,6 +21,16 @@ export default defineConfig({
 								{ label: 'Exercises', slug: 'visual-hierarchy/web-colour/exercises' }
 							],
 						},
+						{
+							label: 'Web Typography',
+							items: [
+								{ label: 'Resources', slug: 'visual-hierarchy/web-typography/resources' },
+								{ label: 'Ex - Wiki Markup', slug: 'visual-hierarchy/web-typography/ex-wiki-markup' },
+								{ label: 'Ex - Readable Text', slug: 'visual-hierarchy/web-typography/ex-readable-typography' },
+								{ label: 'Ex - Font Families', slug: 'visual-hierarchy/web-typography/ex-font-families' }
+							],
+						}
+
 						// { label: 'Repetition', slug: 'visual-hierarchy/repetition' },
 						// { label: 'Space', slug: 'visual-hierarchy/space' },
 						// { label: 'Grid Systems and Alignment', slug: 'visual-hierarchy/grid-systems' },
